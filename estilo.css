@@ -1,0 +1,129 @@
+* { /*se aplica a toda la web*/
+box-sizing: border-box; /* obliga al contenido a caber en las dimensiones que le marquemos, es como delimitar el tamaño máximo*/
+ 
+  
+}
+body {
+font-size:x-large;
+  font-family: Comic Sans MS; /*fuente*/
+  max-width: 100%; 
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center
+}
+header {
+  background-color: #BDBDBD; /*color de fondo*/
+  max-width: 100%; /*ancho máximo*/
+  width: 100%;
+  color: #FFFFFF; /*Color de la fuente*/
+  text-align: center; /*Alineación del texto*/
+  border-radius: 50px;} /*Esquinas redondeadas*//*Después de ver el vídeo, debería definir un prefijo para que los navegadores Web lo lean bien, aunque chrome lo haya realizado como buscaba*/
+   header img {
+     border-radius: 50px; 
+     max-width: 90%;
+     margin-top: 5%;}
+strong {          /*quiero mantener el peso de negrita con strong del archivo HTML*/
+  font-weight: bold;}
+  nav ul {
+  list-style: none; /* quita los puntos de la lista como explicó el profe en la primera videoconferencia */}
+  nav ul li {
+  display: inline-block; /* coloca los <li> en línea */
+  margin-right: 20px; /* separación entre elementos */
+  margin-top: 30px;
+  margin-bottom: 30px}
+  nav ul li a {
+   color: #FFFFFF;             /* color de la letra */
+   text-decoration: none;      /* quita el subrayado */
+   font-weight: bold;          /* fuente más gruesa */
+   padding: 10px 15px;         /* espacio alrededor */
+   border-radius: 5px;         /* esquinas redondeadas */}
+   nav ul li a:hover{
+   background-color: #616161; /* Color de fondo al pasar el ratón (ejemplo: un gris más oscuro) */
+   color: #FFFFFF;             /* Color de la fuente al pasar el ratón (se mantiene blanco) */
+   }
+  p {
+    margin-bottom: 5%;}
+  iframe { /*Le doy forma al enlace de la ubicación de google*/
+    border-radius: 50px;
+    margin: 4%;
+    width: 90%;
+      }
+section {
+   background-color: #F5F5F5; 
+   color:#616161; 
+   font-family: Comic Sans MS;
+   padding: 1%; /*aplico conceptos del box-sizing*/
+   margin: 2%;
+   border-radius: 50px;}
+     section h2 {
+       text-align: center; 
+       width: 90%;
+       margin: 0 auto; /*como explica en el vídeo se queda centrado*/
+       border-width: 2px;
+       border-radius: 50px;
+       border-style: solid; /*Necesario determinarlo para que se vea*/
+       border-color: #BDBDBD;
+       font-size:x-large;
+       background-image: linear-gradient(to right, #BDBDBD, #9E9E9E); /* Definimos para todas las secciones con título h2 el gradiente como background-image. Lo usaré para definirlo de forma suave de izquierda a derecha, combinando con los colores de la cabecera  */
+       color: #FFFFFF; /*Cambiamo el color del texto para que contraste con el fondo oscuro */
+       padding: 10px; /* Le añado relleno para que se aprecie más el gradiente*/
+          } 
+       
+     section p {
+       margin: 0 auto;
+       justify-content: center}
+     section img {
+       display: inline-block;
+       width: 45%; /* dos imágenes por fila, ancho relativo al contenedor */
+       height: auto; /* mantiene la proporción original */
+       margin: 2%; /* espacio entre ellas */
+       border-radius: 50px;
+       vertical-align: middle; /* para que se alineen correctamente */
+       object-fit: contain; /* opcional, asegura que no se recorte, aunque sin este también se veía bien */
+       transition: transform 0.3s ease-in-out; /*tiempo de transición para el cambio de tamaño*/
+      }
+      section img:hover {
+       transform: scale(1.05);/* Hago la imagen un 5% más grande */
+       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Le añado una sombra sutil para darle profundidad */
+       z-index: 10; /* Asegura que la imagen aumentada esté sobre otras */
+       }
+       section a img { /* le quito el borde/subrayado azul de las imagenes con enlace*/
+        border: none;
+        text-decoration: none; 
+        }
+    
+    
+       table {   
+  width: 90%;
+  margin: 20px auto;
+  border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
+  border-collapse: collapse;  /* une bordes de celdas */
+  border-radius: 50px;
+  table-layout: fixed;
+  }
+ 
+  tr, th, td { 
+  text-align: center;             /* 🔹 Centra texto e imágenes */
+  vertical-align: middle;
+ border: 1px solid #BDBDBD; /* Borde para las filas, encabezados y celdas */
+ padding: 2%
+ } 
+ table img {
+width: 200px; 
+margin: 0 auto;
+object-fit: contain;
+border-radius: 50px;
+display: block;
+height: 200px;
+display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
+}
+footer {
+   background-color: #FFFFFF; 
+   color: #212121; 
+   margin:5%;
+   font-family: Comic Sans MS;
+  }
+  footer img {
+    width: 20px;
+    border-radius: 5px
+  }
