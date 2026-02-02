@@ -287,6 +287,7 @@ img {
 
     .barra-contacto-fija {
         padding: 12px 0;
+        font-family: Arial, Helvetica, sans-serif !important;
     }
     
     .contenedor-flexible {
@@ -294,22 +295,42 @@ img {
         gap: 8px; 
     }
 
+   @media (max-width: 600px) {
+    /* ... otros estilos que ya tengas ... */
+
+    .barra-contacto-fija {
+        padding: 12px 0;
+        /* Forzamos Arial para máxima legibilidad en móviles */
+        font-family: Arial, Helvetica, sans-serif !important; 
+    }
+
     .texto-cita {
-        width: 100%;
-        font-size: 0.9em; /* Un poco más pequeño para que no domine toda la vista */
-        margin-bottom: 5px;
         display: block;
+        width: 100%;
+        font-size: 0.85em; 
+        color: #333; /* Un gris oscuro es más legible que el rosa sobre blanco */
+        margin-bottom: 5px;
+        text-transform: uppercase; /* Hace que "PIDE TU CITA" destaque sin ser gigante */
     }
 
     .enlace-contacto {
-        font-size: 1.1em; /* El número sí lo queremos grande para que sea legible */
-        background: #f9f9f9; /* Un fondo ligero para que parezca un botón */
-        padding: 5px 15px;
-        border-radius: 25px;
-        border: 1px solid #eee;
-        width: 80%; /* Para que los botones tengan un tamaño uniforme */
-        justify-content: center; /* Centra el icono y el número dentro del "botón" */
+        font-family: Arial, sans-serif !important;
+        font-size: 1.2em; /* Tamaño aumentado para que el número sea fácil de leer */
+        font-weight: bold;
+        color: #000; /* Negro puro para el mejor contraste posible */
+        background: #f0f0f0; /* Fondo gris muy suave para que parezca un botón táctil */
+        padding: 10px 20px;
+        border-radius: 10px;
+        width: 90%; 
+        margin: 5px auto;
+        justify-content: center;
     }
+
+    /* Ajuste específico para el número de WhatsApp */
+    .enlace-contacto span {
+        color: #25D366 !important; /* El verde oficial de WhatsApp es muy legible */
+    }
+}
 
     /* Ajuste para que las tablas no se rompan en móvil */
     table {
