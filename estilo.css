@@ -12,10 +12,10 @@ font-size:x-large;
   text-align: center
 }
 header {
-  background-color: #BDBDBD; /*color de fondo*/
+  background-color: white; /*color de fondo*/
   max-width: 100%; /*ancho máximo*/
   width: 100%;
-  color: #FFFFFF; /*Color de la fuente*/
+  color: black; /*Color de la fuente*/
   text-align: center; /*Alineación del texto*/
   border-radius: 50px;} /*Esquinas redondeadas*//*Después de ver el vídeo, debería definir un prefijo para que los navegadores Web lo lean bien, aunque chrome lo haya realizado como buscaba*/
    header img {
@@ -32,7 +32,7 @@ strong {          /*quiero mantener el peso de negrita con strong del archivo HT
   margin-top: 30px;
   margin-bottom: 30px}
   nav ul li a {
-   color: #FFFFFF;             /* color de la letra */
+   color: black;             /* color de la letra */
    text-decoration: none;      /* quita el subrayado */
    font-weight: bold;          /* fuente más gruesa */
    padding: 10px 15px;         /* espacio alrededor */
@@ -49,7 +49,7 @@ strong {          /*quiero mantener el peso de negrita con strong del archivo HT
     width: 90%;
       }
 section {
-   background-color: #F5F5F5; 
+   background-color: white; 
    color:#616161; 
    font-family: Comic Sans MS;
    padding: 1%; /*aplico conceptos del box-sizing*/
@@ -118,7 +118,7 @@ height: 200px;
 display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
 }
 footer {
-   background-color: #FFFFFF; 
+   background-color: white; 
    color: #212121; 
    margin:5%;
    font-family: Comic Sans MS;
@@ -127,3 +127,57 @@ footer {
     width: 20px;
     border-radius: 5px
   }
+.ti-widget {
+    margin-top: 60px; /* Ajusta este valor según el espacio que desees */
+    margin-bottom: 20px;
+}
+
+/* Estilos para la barra inferior fija */
+.barra-contacto-fija {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* Blanco con ligera transparencia */
+    border-top: 2px solid #BDBDBD;
+    padding: 15px 0;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    font-family: 'Comic Sans MS', cursive; /* Manteniendo tu estilo */
+}
+
+.contenedor-flexible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Para que en móviles se vea bien */
+}
+
+.barra-contacto-fija img {
+    width: 22px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 5px; /* Como los iconos que ya tienes */
+}
+
+.texto-cita {
+    color: #cf5468; /* Un tono que contraste y llame la atención */
+    font-size: 1.1em;
+}
+
+/* IMPORTANTE: Añade esto para que el contenido de la web no quede oculto bajo la barra */
+body {
+    padding-bottom: 80px; 
+}
+.enlace-contacto {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Mantiene el color original del texto */
+    display: flex;
+    align-items: center;
+}
+
+.enlace-contacto:hover {
+    opacity: 0.8;          /* Pequeño efecto visual al pasar el ratón */
+}
