@@ -138,87 +138,46 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.98); /* Menos transparencia para mejor lectura */
+    background-color: rgba(255, 255, 255, 0.95); /* Blanco con ligera transparencia */
     border-top: 2px solid #BDBDBD;
-    padding: 10px 0;
-    z-index: 9999;
+    padding: 15px 0;
+    z-index: 9999; /* Asegura que esté por encima de todo */
     box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', cursive; /* Manteniendo tu estilo */
 }
 
 .contenedor-flexible {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
-    padding: 0 10px;
+    gap: 25px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Para que en móviles se vea bien */
 }
 
 .barra-contacto-fija img {
-    width: 24px; /* Un poco más grandes para móviles */
+    width: 22px;
     height: auto;
     vertical-align: middle;
-    margin-right: 8px;
-    border-radius: 5px;
+    margin-right: 5px;
+    border-radius: 5px; /* Como los iconos que ya tienes */
 }
 
 .texto-cita {
-    color: #cf5468;
+    color: #cf5468; /* Un tono que contraste y llame la atención */
     font-size: 1.1em;
-    font-weight: bold;
 }
 
+/* IMPORTANTE: Añade esto para que el contenido de la web no quede oculto bajo la barra */
+body {
+    padding-bottom: 80px; 
+}
 .enlace-contacto {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Mantiene el color original del texto */
     display: flex;
     align-items: center;
-    font-size: 1.1em; /* Tamaño legible */
-    white-space: nowrap; /* Evita que el número de teléfono se parta en dos líneas */
 }
 
-/* --- AJUSTES ESPECÍFICOS PARA MÓVIL (Sustituye el final de tu CSS) --- */
-@media (max-width: 600px) {
-    body {
-        /* Aumentamos el margen inferior para que la barra no tape el contenido */
-        padding-bottom: 120px !important; 
-        font-size: large; /* Reducimos el tamaño general en móvil para que no sea gigante */
-    }
-
-    .barra-contacto-fija {
-        padding: 12px 0;
-    }
-    
-    .contenedor-flexible {
-        flex-direction: column; /* Ponemos los elementos uno sobre otro */
-        gap: 8px; 
-    }
-
-    .texto-cita {
-        width: 100%;
-        font-size: 0.9em; /* Un poco más pequeño para que no domine toda la vista */
-        margin-bottom: 5px;
-        display: block;
-    }
-
-    .enlace-contacto {
-        font-size: 1.1em; /* El número sí lo queremos grande para que sea legible */
-        background: #f9f9f9; /* Un fondo ligero para que parezca un botón */
-        padding: 5px 15px;
-        border-radius: 25px;
-        border: 1px solid #eee;
-        width: 80%; /* Para que los botones tengan un tamaño uniforme */
-        justify-content: center; /* Centra el icono y el número dentro del "botón" */
-    }
-
-    /* Ajuste para que las tablas no se rompan en móvil */
-    table {
-        font-size: 0.7em; /* Las tablas suelen dar problemas en móvil si la letra es grande */
-    }
-    
-    table img {
-        width: 80px;
-        height: 80px;
-    }
+.enlace-contacto:hover {
+    opacity: 0.8;          /* Pequeño efecto visual al pasar el ratón */
 }
