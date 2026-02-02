@@ -50,7 +50,7 @@ nav ul li a {
    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
    nav ul li a:hover{
-   background-color: black; /* Color de fondo al pasar el ratón (ejemplo: un gris más oscuro) */
+   background-color: #9E9E9E; /* Color de fondo al pasar el ratón (ejemplo: un gris más oscuro) */
    color: white;             /* Color de la fuente al pasar el ratón (se mantiene blanco) */
    transform: scale(1.2); /* Aumenta el tamaño un 20% */
    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
