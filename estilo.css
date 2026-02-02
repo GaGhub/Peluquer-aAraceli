@@ -251,7 +251,7 @@ img {
         /* Aumentamos el margen inferior para que la barra no tape el contenido */
         padding-bottom: 120px !important; 
         font-size: large; /* Reducimos el tamaño general en móvil para que no sea gigante */
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif ;
     }
 
     /* Mantiene el menú en una sola fila deslizable */
@@ -305,7 +305,7 @@ img {
         display: block;
         width: 100%;
         font-size: 0.85em; 
-        color: #333; /* Un gris oscuro es más legible que el rosa sobre blanco */
+        color:red; 
         margin-bottom: 5px;
         text-transform: uppercase; /* Hace que "PIDE TU CITA" destaque sin ser gigante */
     }
