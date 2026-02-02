@@ -178,28 +178,47 @@ footer {
     white-space: nowrap; /* Evita que el número de teléfono se parta en dos líneas */
 }
 
-/* --- AJUSTES ESPECÍFICOS PARA MÓVIL --- */
+/* --- AJUSTES ESPECÍFICOS PARA MÓVIL (Sustituye el final de tu CSS) --- */
 @media (max-width: 600px) {
+    body {
+        /* Aumentamos el margen inferior para que la barra no tape el contenido */
+        padding-bottom: 120px !important; 
+        font-size: large; /* Reducimos el tamaño general en móvil para que no sea gigante */
+    }
+
     .barra-contacto-fija {
-        padding: 8px 0;
+        padding: 12px 0;
     }
     
     .contenedor-flexible {
-        gap: 10px; /* Estrecha el espacio para que quepan mejor */
+        flex-direction: column; /* Ponemos los elementos uno sobre otro */
+        gap: 8px; 
     }
 
     .texto-cita {
-        width: 100%; /* Obliga a "PIDE TU CITA" a estar arriba en el centro */
-        text-align: center;
-        font-size: 1em;
-        margin-bottom: 2px;
+        width: 100%;
+        font-size: 0.9em; /* Un poco más pequeño para que no domine toda la vista */
+        margin-bottom: 5px;
+        display: block;
     }
 
     .enlace-contacto {
-        font-size: 1em; /* Ajuste fino del tamaño del número */
+        font-size: 1.1em; /* El número sí lo queremos grande para que sea legible */
+        background: #f9f9f9; /* Un fondo ligero para que parezca un botón */
+        padding: 5px 15px;
+        border-radius: 25px;
+        border: 1px solid #eee;
+        width: 80%; /* Para que los botones tengan un tamaño uniforme */
+        justify-content: center; /* Centra el icono y el número dentro del "botón" */
+    }
+
+    /* Ajuste para que las tablas no se rompan en móvil */
+    table {
+        font-size: 0.7em; /* Las tablas suelen dar problemas en móvil si la letra es grande */
     }
     
-    body {
-        padding-bottom: 100px; /* Un poco más de espacio al final porque la barra crece en móvil */
+    table img {
+        width: 80px;
+        height: 80px;
     }
 }
