@@ -24,19 +24,27 @@ header {
      margin-top: 5%;}
 strong {          /*quiero mantener el peso de negrita con strong del archivo HTML*/
   font-weight: bold;}
-  nav ul {
-  list-style: none; /* quita los puntos de la lista como explicó el profe en la primera videoconferencia */}
-  nav ul li {
-  display: inline-block; /* coloca los <li> en línea */
-  margin-right: 20px; /* separación entre elementos */
-  margin-top: 30px;
-  margin-bottom: 30px}
-  nav ul li a {
-   color: black;             /* color de la letra */
-   text-decoration: none;      /* quita el subrayado */
-   font-weight: bold;          /* fuente más gruesa */
-   padding: 10px 15px;         /* espacio alrededor */
-   border-radius: 5px;         /* esquinas redondeadas */}
+ nav ul {
+    list-style: none;
+    display: flex;          /* Usamos flexbox para mantener la línea */
+    justify-content: center;
+    flex-wrap: nowrap;      /* EVITA que los elementos bajen de fila */
+    padding: 0;
+    overflow-x: auto;       /* Si no caben, permite deslizar con el dedo */
+    -webkit-overflow-scrolling: touch;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 5px;       /* Reducimos márgenes laterales */
+    white-space: nowrap;    /* Evita que el texto de un botón se parta en dos */
+}
+
+nav ul li a h1 {            /* Ajuste para los h1 que tienes dentro de los enlaces */
+    font-size: 16px;        /* Tamaño fijo base para que no herede el x-large en móvil */
+    margin: 0;
+    display: inline;
+}
    nav ul li a:hover{
    background-color: #616161; /* Color de fondo al pasar el ratón (ejemplo: un gris más oscuro) */
    color: #FFFFFF;             /* Color de la fuente al pasar el ratón (se mantiene blanco) */
@@ -185,6 +193,35 @@ footer {
         padding-bottom: 120px !important; 
         font-size: large; /* Reducimos el tamaño general en móvil para que no sea gigante */
     }
+
+    /* Mantiene el menú en una sola fila deslizable */
+    header nav {
+        width: 100%;
+        overflow-x: auto; 
+    }
+
+    nav ul {
+        justify-content: flex-start; /* Alinea al inicio para facilitar el scroll */
+        padding-left: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 8px; /* Botones más compactos */
+        font-size: 0.7em;  /* Fuente más pequeña para que quepan más opciones */
+    }
+
+    /* --- Corrección de la Tabla de Productos --- */
+    table {
+        table-layout: auto; /* Permite que las columnas se ajusten al contenido */
+        width: 100%;
+        font-size: 0.75em;
+    }
+
+    table img {
+        width: 60px;  /* Imagen más pequeña para que no empuje el texto */
+        height: 60px;
+    }
+}
 
     .barra-contacto-fija {
         padding: 12px 0;
