@@ -17,9 +17,9 @@ header {
   width: 100%;
   color: black; /*Color de la fuente*/
   text-align: center; /*Alineación del texto*/
-  border-radius: 50px;} /*Esquinas redondeadas*//*Después de ver el vídeo, debería definir un prefijo para que los navegadores Web lo lean bien, aunque chrome lo haya realizado como buscaba*/
+  border-radius: 20px;} /*Esquinas redondeadas*//*Después de ver el vídeo, debería definir un prefijo para que los navegadores Web lo lean bien, aunque chrome lo haya realizado como buscaba*/
    header img {
-     border-radius: 50px; 
+     border-radius: 20px; 
      max-width: 90%;
      margin-top: 5%;}
 strong {          /*quiero mantener el peso de negrita con strong del archivo HTML*/
@@ -58,7 +58,7 @@ nav ul li a {
   p {
     margin-bottom: 5%;}
   iframe { /*Le doy forma al enlace de la ubicación de google*/
-    border-radius: 50px;
+    border-radius: 20px;
     margin: 4%;
     width: 90%;
       }
@@ -74,7 +74,7 @@ section {
        width: 90%;
        margin: 0 auto; /*como explica en el vídeo se queda centrado*/
        border-width: 2px;
-       border-radius: 50px;
+       border-radius: 20px;
        border-style: solid; /*Necesario determinarlo para que se vea*/
        border-color: #BDBDBD;
        font-size:x-large;
@@ -92,7 +92,7 @@ section {
     width: 35%; 
     height: auto; /* Esto garantiza que se mantenga la proporción original */
     margin: 4%;  /* Aumentamos el margen lateral para que sigan centradas de dos en dos */
-    border-radius: 50px;
+    border-radius: 20px;
     vertical-align: middle;
     object-fit: contain; /* Mantiene la imagen íntegra sin recortes */
     transition: transform 0.3s ease-in-out;
@@ -113,7 +113,7 @@ section {
   border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
  border-collapse: separate; 
   border-spacing: 0; 
-  border-radius: 50px;
+  border-radius: 20px;
   table-layout: fixed;
   overflow: hidden; /* Esto asegura que el fondo de las celdas no se salga de las esquinas */
   }
@@ -139,7 +139,7 @@ tr:last-child td {
 width: 200px; 
 margin: 0 auto;
 object-fit: contain;
-border-radius: 50px;
+border-radius: 20px;
 height: 200px;
 display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
 }
@@ -261,13 +261,15 @@ img {
     }
 
     nav ul {
-        justify-content: flex-start; /* Alinea al inicio para facilitar el scroll */
-        padding-left: 10px;
+        flex-wrap: wrap;       /* CAMBIO CLAVE: de nowrap a wrap */
+        justify-content: center; /* Centra los botones en las dos líneas */
+        gap: 10px;             /* Espacio controlado entre botones */
+        overflow-x: visible;   /* Ya no necesitamos el scroll horizontal */
     }
 
     nav ul li a {
         padding: 5px 8px; /* Botones más compactos */
-        font-size: 0.7em;  /* Fuente más pequeña para que quepan más opciones */
+        font-size: 0.8em;  /* Fuente más pequeña para que quepan más opciones */
     }
 
     /* --- Corrección de la Tabla de Productos --- */
