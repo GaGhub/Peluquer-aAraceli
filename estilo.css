@@ -138,46 +138,68 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95); /* Blanco con ligera transparencia */
+    background-color: rgba(255, 255, 255, 0.98); /* Menos transparencia para mejor lectura */
     border-top: 2px solid #BDBDBD;
-    padding: 15px 0;
-    z-index: 9999; /* Asegura que esté por encima de todo */
+    padding: 10px 0;
+    z-index: 9999;
     box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
-    font-family: 'Comic Sans MS', cursive; /* Manteniendo tu estilo */
+    font-family: 'Comic Sans MS', cursive;
 }
 
 .contenedor-flexible {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px; /* Espacio entre los elementos */
-    flex-wrap: wrap; /* Para que en móviles se vea bien */
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
+    padding: 0 10px;
 }
 
 .barra-contacto-fija img {
-    width: 22px;
+    width: 24px; /* Un poco más grandes para móviles */
     height: auto;
     vertical-align: middle;
-    margin-right: 5px;
-    border-radius: 5px; /* Como los iconos que ya tienes */
+    margin-right: 8px;
+    border-radius: 5px;
 }
 
 .texto-cita {
-    color: #cf5468; /* Un tono que contraste y llame la atención */
+    color: #cf5468;
     font-size: 1.1em;
+    font-weight: bold;
 }
 
-/* IMPORTANTE: Añade esto para que el contenido de la web no quede oculto bajo la barra */
-body {
-    padding-bottom: 80px; 
-}
 .enlace-contacto {
-    text-decoration: none; /* Quita el subrayado */
-    color: inherit;        /* Mantiene el color original del texto */
+    text-decoration: none;
+    color: inherit;
     display: flex;
     align-items: center;
+    font-size: 1.1em; /* Tamaño legible */
+    white-space: nowrap; /* Evita que el número de teléfono se parta en dos líneas */
 }
 
-.enlace-contacto:hover {
-    opacity: 0.8;          /* Pequeño efecto visual al pasar el ratón */
+/* --- AJUSTES ESPECÍFICOS PARA MÓVIL --- */
+@media (max-width: 600px) {
+    .barra-contacto-fija {
+        padding: 8px 0;
+    }
+    
+    .contenedor-flexible {
+        gap: 10px; /* Estrecha el espacio para que quepan mejor */
+    }
+
+    .texto-cita {
+        width: 100%; /* Obliga a "PIDE TU CITA" a estar arriba en el centro */
+        text-align: center;
+        font-size: 1em;
+        margin-bottom: 2px;
+    }
+
+    .enlace-contacto {
+        font-size: 1em; /* Ajuste fino del tamaño del número */
+    }
+    
+    body {
+        padding-bottom: 100px; /* Un poco más de espacio al final porque la barra crece en móvil */
+    }
 }
