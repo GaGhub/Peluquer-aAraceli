@@ -295,9 +295,6 @@ img {
         gap: 8px; 
     }
 
-   @media (max-width: 600px) {
-    /* ... otros estilos que ya tengas ... */
-
     .barra-contacto-fija {
         padding: 12px 0;
         /* Forzamos Arial para máxima legibilidad en móviles */
@@ -348,4 +345,3 @@ img {
         width: 80px;
         height: 80px;
     }
-}
