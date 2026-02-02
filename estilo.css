@@ -327,7 +327,7 @@ img {
     .enlace-contacto span {
         color: #25D366 !important; /* El verde oficial de WhatsApp es muy legible */
     }
-}
+
 
     /* Ajuste para que las tablas no se rompan en móvil */
     table {
@@ -345,3 +345,4 @@ img {
         width: 80px;
         height: 80px;
     }
+}
