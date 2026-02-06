@@ -280,7 +280,7 @@ img {
 
     table img {
         width: 60px;  /* Imagen más pequeña para que no empuje el texto */
-        height: 60px;
+        height: 80px;
     }
 
 
@@ -338,10 +338,4 @@ img {
     th:nth-child(1), td:nth-child(1) { width: 80%; }
     th:nth-child(2), td:nth-child(2) { width: 50%; }
   
-
-    
-    table img {
-        width: 80px;
-        height: 80px;
-    }
 }
