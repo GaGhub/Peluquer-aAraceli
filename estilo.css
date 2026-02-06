@@ -271,40 +271,48 @@ img {
     }
 
     /* --- Corrección de la Tabla de Productos --- */
-   table {
-        table-layout: auto; 
-        width: 100%;
-        border: none; /* Quitamos bordes externos si prefieres un look más limpio */
-         text-align: center;
-         vertical-align: middle;
-    }
-
-    table, tbody, tr, td {
-        display: block;
+  table {
+        display: block;        /* Convierte la tabla en un contenedor simple */
         width: 100% !important;
+        border: none;          /* Quitamos el borde a la tabla general */
+        border-collapse: separate;
     }
 
+    table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    /* Cada fila (producto) se convierte en una caja con borde */
     tr {
-        margin-bottom: 40px; /* Más espacio entre productos */
-        border-bottom: 2px solid #BDBDBD;
-        padding-bottom: 20px;
+        display: flex;         /* Usamos flex para controlar el orden si fuera necesario */
+        flex-direction: column; /* Apila contenido: imagen arriba, texto abajo */
+        margin-bottom: 30px;    /* Espacio entre productos */
+        border: 2px solid #BDBDBD; /* EL BORDE EXTERIOR QUE BUSCABAS */
+        border-radius: 20px;    /* Esquinas redondeadas para cada producto */
+        overflow: hidden;       /* Para que la imagen no se salga de las esquinas redondeadas */
+        background-color: #fff;
+        padding: 0;             /* Quitamos padding para que la imagen llegue al borde si quieres */
     }
 
     td {
-        border: none !important;
-        padding: 10px 0 !important; /* Quitamos padding lateral para ganar espacio */
-        text-align: center !important;
+        display: block;
         width: 100% !important;
+        border: none !important; /* Quitamos bordes internos para que no se corten */
+        padding: 15px !important; /* Espacio para el texto */
+        box-sizing: border-box;
     }
 
-    /* IMAGEN GRANDE: Aquí está el cambio clave */
+    /* Ajuste de la imagen para que ocupe el ancho superior */
     table img {
-        width: 95% !important; /* Ocupa casi todo el ancho de la pantalla */
-        max-width: none !important; /* Eliminamos el límite de 350px */
+        width: 100% !important;  /* Ocupa todo el ancho de la caja */
+        max-width: none !important;
         height: auto !important;
-        margin: 0 auto 20px auto !important;
+        margin: 0 !important;
         display: block;
-        border-radius: 15px;
+        border-radius: 0;        /* Quitamos su radio propio para que encaje con el del TR */
+        border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
+    }
     }
 
     /* Ajuste de texto para que no quede pegado a los bordes */
