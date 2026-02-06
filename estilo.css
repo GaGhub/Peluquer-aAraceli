@@ -87,10 +87,9 @@ section {
        margin: 0 auto;
        justify-content: center}
      section img {
-    display: inline-block;
-    /* Reducimos el ancho para que la altura baje proporcionalmente */
     width: 35%; 
-    height: auto; /* Esto garantiza que se mantenga la proporción original */
+    height: auto;
+    display: inline-block;
     margin: 4%;  /* Aumentamos el margen lateral para que sigan centradas de dos en dos */
     border-radius: 20px;
     vertical-align: middle;
@@ -136,11 +135,11 @@ tr:last-child td {
   border-bottom: none;
 }
  table img {
-width: 200px; 
+ width: 35%; 
+ height: auto;
 margin: 0 auto;
 object-fit: contain;
 border-radius: 20px;
-height: 200px;
 display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
 }
 footer {
