@@ -278,8 +278,8 @@ img {
     }
 
     table img {
-        width: 80px;  /* Imagen más pequeña para que no empuje el texto */
-        height: 60px;
+        width: 100px;  /* Imagen más pequeña para que no empuje el texto */
+        height: 100px;
     }
 
 
