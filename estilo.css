@@ -277,38 +277,38 @@ img {
         border: none; /* Quitamos bordes externos si prefieres un look más limpio */
     }
 
+   /* Forzamos a la tabla a comportarse como bloques apilados */
     table, tbody, tr, td {
         display: block;
         width: 100% !important;
     }
 
     tr {
-        margin-bottom: 40px; /* Más espacio entre productos */
+        margin-bottom: 30px; /* Espacio entre un producto y otro */
         border-bottom: 2px solid #BDBDBD;
-        padding-bottom: 20px;
     }
 
     td {
         border: none !important;
-        padding: 10px 0 !important; /* Quitamos padding lateral para ganar espacio */
+        padding: 10px !important;
         text-align: center;
-        width: 100% !important;
     }
 
-    /* IMAGEN GRANDE: Aquí está el cambio clave */
+    /* Imagen del producto: ahora ocupa casi todo el ancho disponible */
     table img {
-        width: 95% !important; /* Ocupa casi todo el ancho de la pantalla */
-        max-width: none !important; /* Eliminamos el límite de 350px */
+        width: 90% !important; 
+        max-width: 350px; /* Evita que crezca demasiado en pantallas intermedias */
         height: auto !important;
-        margin: 0 auto 20px auto !important;
+        margin: 0 auto 15px auto !important;
         display: block;
-        border-radius: 15px;
     }
 
-    /* Ajuste de texto para que no quede pegado a los bordes */
+    /* Ajuste del texto de descripción debajo de la imagen */
     td:last-child {
-        padding: 0 5% !important; 
+        font-size: 0.95em;
         line-height: 1.5;
+        text-align: left; /* Más fácil de leer */
+        padding-bottom: 20px !important;
     }
 
     .barra-contacto-fija {
