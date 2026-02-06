@@ -112,7 +112,7 @@ section {
   border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
  border-collapse: separate; 
   border-spacing: 0; 
-  border-radius: 20px !important;
+  border-radius: 20px;
   table-layout: fixed;
   overflow: hidden; /* Esto asegura que el fondo de las celdas no se salga de las esquinas */
   }
@@ -123,7 +123,6 @@ section {
   border-bottom: 1px solid #BDBDBD; 
   border-right: 1px solid #BDBDBD;
   padding: 2%;
-  overflow: hidden;
 }
 
 /* Quitamos el borde derecho de la última columna y el inferior de la última fila 
@@ -138,15 +137,16 @@ tr:last-child td {
  table img {
  width: 35%; 
  height: auto;
-margin: 0 auto 20px auto;
+margin: 0 auto;
 object-fit: contain;
-border-radius: 20px !important;
+border-radius: 20px;
 display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
 }
 footer {
    background-color: white; 
    color: #212121; 
    margin:5%;
+   font-family: Comic Sans MS;
   }
   footer img {
     width: 20px;
@@ -278,11 +278,11 @@ img {
         font-size: 0.75em;
     }
 
-       table img {
-        width: 100px;
-        height: 100px;
-        border-radius: 10px !important; 
+    table img {
+        width: 60px;  /* Imagen más pequeña para que no empuje el texto */
+        height: 60px;
     }
+
 
     .barra-contacto-fija {
         padding: 12px 0;
@@ -328,6 +328,11 @@ img {
     }
 
 
+    /* Ajuste para que las tablas no se rompan en móvil */
+    table {
+        font-size: 0.85em; /* Fuente más pequeña para que quepa el texto y el precio */
+        width: 100%;       /* Ocupa todo el ancho disponible */
+    }
     
     /* Ajustamos el ancho de las columnas: la imagen ocupa menos que el texto */
     th:nth-child(1), td:nth-child(1) { width: 30%; }
@@ -335,5 +340,8 @@ img {
     th:nth-child(3), td:nth-child(3) { width: 20%; }
 
     
- 
+    table img {
+        width: 80px;
+        height: 80px;
+    }
 }
