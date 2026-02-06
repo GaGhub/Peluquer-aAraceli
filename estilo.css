@@ -335,9 +335,9 @@ img {
     }
     
     /* Ajustamos el ancho de las columnas: la imagen ocupa menos que el texto */
-    th:nth-child(1), td:nth-child(1) { width: 30%; }
+    th:nth-child(1), td:nth-child(1) { width: 50%; }
     th:nth-child(2), td:nth-child(2) { width: 50%; }
-    th:nth-child(3), td:nth-child(3) { width: 20%; }
+  
 
     
     table img {
