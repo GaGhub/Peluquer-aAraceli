@@ -271,38 +271,45 @@ img {
     }
 
     /* --- Corrección de la Tabla de Productos --- */
-    table {
-        table-layout: auto; /* Permite que las columnas se ajusten al contenido */
+   table {
+        table-layout: auto; 
         width: 100%;
-        font-size: 0.75em;
+        border: none; /* Quitamos bordes externos si prefieres un look más limpio */
     }
 
-    /* Forzamos a la tabla a comportarse como bloques apilados */
     table, tbody, tr, td {
         display: block;
         width: 100% !important;
     }
 
     tr {
-        margin-bottom: 30px; /* Espacio entre un producto y otro */
+        margin-bottom: 40px; /* Más espacio entre productos */
         border-bottom: 2px solid #BDBDBD;
+        padding-bottom: 20px;
     }
 
     td {
         border: none !important;
-        padding: 10px !important;
+        padding: 10px 0 !important; /* Quitamos padding lateral para ganar espacio */
         text-align: center;
+        width: 100% !important;
     }
 
-    /* Imagen del producto: ahora ocupa casi todo el ancho disponible */
+    /* IMAGEN GRANDE: Aquí está el cambio clave */
     table img {
-        width: 90% !important; 
-        max-width: 350px; /* Evita que crezca demasiado en pantallas intermedias */
+        width: 95% !important; /* Ocupa casi todo el ancho de la pantalla */
+        max-width: none !important; /* Eliminamos el límite de 350px */
         height: auto !important;
-        margin: 0 auto 15px auto !important;
+        margin: 0 auto 20px auto !important;
         display: block;
+        border-radius: 15px;
     }
 
+    /* Ajuste de texto para que no quede pegado a los bordes */
+    td:last-child {
+        padding: 0 5% !important; 
+        line-height: 1.5;
+    }
 
     .barra-contacto-fija {
         padding: 12px 0;
