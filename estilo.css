@@ -112,7 +112,7 @@ section {
   border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
  border-collapse: separate; 
   border-spacing: 0; 
-  border-radius: 20px;
+  border-radius: 20px !important;
   table-layout: fixed;
   overflow: hidden; /* Esto asegura que el fondo de las celdas no se salga de las esquinas */
   }
@@ -123,6 +123,7 @@ section {
   border-bottom: 1px solid #BDBDBD; 
   border-right: 1px solid #BDBDBD;
   padding: 2%;
+  overflow: hidden;
 }
 
 /* Quitamos el borde derecho de la última columna y el inferior de la última fila 
@@ -137,10 +138,9 @@ tr:last-child td {
  table img {
  width: 35%; 
  height: auto;
-margin: 0 auto;
-padding: 2%;
+margin: 0 auto 20px auto;
 object-fit: contain;
-border-radius: 20px;
+border-radius: 20px !important;
 display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
 }
 footer {
@@ -335,7 +335,8 @@ img {
 
     
     table img {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
     }
 }
