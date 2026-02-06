@@ -146,7 +146,6 @@ footer {
    background-color: white; 
    color: #212121; 
    margin:5%;
-   font-family: Comic Sans MS;
   }
   footer img {
     width: 20px;
@@ -279,8 +278,8 @@ img {
     }
 
     table img {
-        width: 60px;  /* Imagen más pequeña para que no empuje el texto */
-        height: 80px;
+        width: 80px;  /* Imagen más pequeña para que no empuje el texto */
+        height: 60px;
     }
 
 
