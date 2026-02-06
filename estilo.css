@@ -278,6 +278,12 @@ img {
         font-size: 0.75em;
     }
 
+       table img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px !important; 
+    }
+
     .barra-contacto-fija {
         padding: 12px 0;
         font-family: Arial, Helvetica, sans-serif !important;
@@ -322,11 +328,6 @@ img {
     }
 
 
-    /* Ajuste para que las tablas no se rompan en móvil */
-    table {
-        font-size: 0.85em; /* Fuente más pequeña para que quepa el texto y el precio */
-        width: 100%;       /* Ocupa todo el ancho disponible */
-    }
     
     /* Ajustamos el ancho de las columnas: la imagen ocupa menos que el texto */
     th:nth-child(1), td:nth-child(1) { width: 30%; }
@@ -334,9 +335,5 @@ img {
     th:nth-child(3), td:nth-child(3) { width: 20%; }
 
     
-    table img {
-        width: 100px;
-        height: 100px;
-        border-radius: 10px !important; 
-    }
+ 
 }
