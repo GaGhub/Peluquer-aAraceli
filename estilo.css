@@ -274,7 +274,6 @@ img {
    table {
         table-layout: auto; 
         width: 100%;
-        border: none; /* Quitamos bordes externos si prefieres un look más limpio */
     }
 
    /* Forzamos a la tabla a comportarse como bloques apilados */
