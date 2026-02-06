@@ -138,6 +138,7 @@ tr:last-child td {
  width: 35%; 
  height: auto;
 margin: 0 auto;
+padding: 2%;
 object-fit: contain;
 border-radius: 20px;
 display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
@@ -344,4 +345,5 @@ img {
         width: 80px;
         height: 80px;
     }
+
 }
