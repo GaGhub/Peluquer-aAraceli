@@ -316,8 +316,8 @@ img {
     }
   .tabla-servicios {
         display: table !important; 
-        width: 90% !important; /* Cambiado de 90% a 100% para aprovechar el espacio */
-        margin: 10px 0 !important;
+        width: 90% !important;
+        margin: 0 auto !important;
         border-collapse: collapse !important; /* Mejor para líneas simples */
         table-layout: auto !important; /* Permite que el texto se ajuste naturalmente */
     }
@@ -392,14 +392,5 @@ img {
     .enlace-contacto span {
         color: #25D366 !important; /* El verde oficial de WhatsApp es muy legible */
     }
-
-
-    /* Ajuste para que las tablas no se rompan en móvil */
-    
-    /* Ajustamos el ancho de las columnas: la imagen ocupa menos que el texto */
-  /*  th:nth-child(1), td:nth-child(1) { width: 80%; }
-    th:nth-child(2), td:nth-child(2) { width: 50%; }
-    
-    */
   
 }
