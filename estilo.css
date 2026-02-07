@@ -308,13 +308,13 @@ img {
 
     /* Imágenes de productos */
     table img {
-        width: 100% !important;  
-        max-width: none !important;
+        width: 60% !important;  /* Reducimos del 100% al 70% (ajusta este % a tu gusto) */
+        max-width: 300px !important; /* Evita que en tablets se vean enormes */
         height: auto !important;
-        margin: 0 !important;
+        margin: 15px auto !important; /* Margen arriba/abajo y AUTO a los lados para centrar */
         display: block;
-        border-radius: 20px;        
-        border-bottom: 1px solid #BDBDBD; 
+        border-radius: 15px;        
+        border: 1px solid #BDBDBD; 
     }
 
     /* --- CORRECCIÓN DEFINITIVA TABLA SERVICIOS --- */
