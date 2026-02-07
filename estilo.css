@@ -315,7 +315,7 @@ img {
         border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
     }
   .tabla-servicios {
-        display: table-row;
+        display: table;
         width: 90%;
         margin: 20px auto;
          border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
@@ -326,14 +326,25 @@ img {
         overflow: hidden; /* Esto asegura que el fondo de las celdas no se salga de las esquinas */
     }
 
-    .tabla-servicios tr, th, td { 
+    .tabla-servicios tr { 
+  display: table-row
   text-align: center;
   vertical-align: middle;
   /* Reducimos el borde para que no se vea tosco con el nuevo espaciado */
+  border: 0px ;
   border-bottom: 1px solid #BDBDBD; 
   border-right: 1px solid #BDBDBD;
   padding: 2%;
 }
+
+.tabla-servicios td {
+        display: table-cell !important; /* Obliga a comportarse como parte de la tabla, no como bloque */
+        width: 100% !important;
+        
+        border-right: none !important; /* Elimina bordes laterales para evitar el efecto "celda suelta" */
+        padding: 15px 10px !important;
+        text-align: center;
+    }
 
     /* Quitamos el borde inferior a la última fila para no romper el redondeado */
     .tabla-servicios tr:last-child td {
