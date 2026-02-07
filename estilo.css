@@ -249,8 +249,6 @@ img {
     body {
         /* Aumentamos el margen inferior para que la barra no tape el contenido */
         padding-bottom: 120px !important; 
-        margin-left: 2% !important; /* Pequeño margen para centrado */
-        margin-right: 2% !important; /* Pequeño margen para centrado */
         font-size: large; /* Reducimos el tamaño general en móvil para que no sea gigante */
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     }
@@ -317,42 +315,34 @@ img {
         border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
     }
   .tabla-servicios {
-        display: table !important; 
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        border-collapse: collapse !important;
-        table-layout: fixed !important; /* Asegura que ocupe todo el ancho disponible */
+         width: 90%;
+        margin: 20px auto;
+         border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
+         border-collapse: separate; 
+         border-spacing: 0; 
+        border-radius: 10px;
+        table-layout: fixed;
+        overflow: hidden; /* Esto asegura que el fondo de las celdas no se salga de las esquinas */
     }
 
-    .tabla-servicios tr {
-        display: table-row !important;
-        width: 100% !important;
-    }
-
-    .tabla-servicios td {
-        display: table-cell !important;
-        width: 100% !important;
-        padding: 15px 10px !important; /* Más espacio para mejor legibilidad */
-        border-bottom: 1px solid #BDBDBD !important;
-        font-size: 1em;
-        text-align: center;
-        word-wrap: break-word; /* Permite que el texto largo se ajuste */
-        box-sizing: border-box !important;
-    }
+    .tabla-servicios tr, th, td { 
+  text-align: center;
+  vertical-align: middle;
+  /* Reducimos el borde para que no se vea tosco con el nuevo espaciado */
+  border-bottom: 1px solid #BDBDBD; 
+  border-right: 1px solid #BDBDBD;
+  padding: 2%;
+}
 
     /* Quitamos el borde inferior a la última fila para no romper el redondeado */
     .tabla-servicios tr:last-child td {
         border-bottom: none !important;
     }
-    
-    /* Aseguramos que todas las secciones ocupen todo el ancho en móvil */
-    section {
-        width: 96% !important; /* Dejamos un pequeño margen para el centrado */
-        max-width: 96% !important;
-        margin: 10px auto !important; /* Centramos con margin auto */
-        padding: 15px 10px !important;
-        box-sizing: border-box !important;
+
+    /* Ajuste de texto para que no quede pegado a los bordes */
+    td:last-child {
+        padding: 0 5% !important; 
+        line-height: 1.5;
     }
 
     .barra-contacto-fija {
