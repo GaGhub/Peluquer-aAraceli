@@ -95,6 +95,7 @@ section {
     vertical-align: middle;
     object-fit: contain; /* Mantiene la imagen íntegra sin recortes */
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
       section img:hover {
        transform: scale(1.05);/* Hago la imagen un 5% más grande */
