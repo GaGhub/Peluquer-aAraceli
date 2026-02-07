@@ -249,6 +249,8 @@ img {
     body {
         /* Aumentamos el margen inferior para que la barra no tape el contenido */
         padding-bottom: 120px !important; 
+        margin-left: 0 !important; /* Eliminamos márgenes laterales */
+        margin-right: 0 !important; /* Eliminamos márgenes laterales */
         font-size: large; /* Reducimos el tamaño general en móvil para que no sea gigante */
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     }
@@ -317,33 +319,40 @@ img {
   .tabla-servicios {
         display: table !important; 
         width: 100% !important;
-        margin: 0 auto !important;
-        border-collapse: collapse !important; /* Mejor para líneas simples */
-        table-layout: auto !important; /* Permite que el texto se ajuste naturalmente */
+        max-width: 100% !important;
+        margin: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important; /* Asegura que ocupe todo el ancho disponible */
     }
 
     .tabla-servicios tr {
         display: table-row !important;
+        width: 100% !important;
     }
 
     .tabla-servicios td {
         display: table-cell !important;
         width: 100% !important;
-        padding: 12px 5px !important; /* Más espacio vertical para que sea fácil de leer */
+        padding: 15px 10px !important; /* Más espacio para mejor legibilidad */
         border-bottom: 1px solid #BDBDBD !important;
-        font-size: 1.1em; /* Un poco más grande para legibilidad */
+        font-size: 1em;
         text-align: center;
+        word-wrap: break-word; /* Permite que el texto largo se ajuste */
+        box-sizing: border-box !important;
     }
 
     /* Quitamos el borde inferior a la última fila para no romper el redondeado */
     .tabla-servicios tr:last-child td {
         border-bottom: none !important;
     }
-
-    /* Ajuste de texto para que no quede pegado a los bordes */
-    td:last-child {
-        padding: 0 5% !important; 
-        line-height: 1.5;
+    
+    /* Aseguramos que todas las secciones ocupen todo el ancho en móvil */
+    section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 10px 0 !important;
+        padding: 15px 5px !important;
+        box-sizing: border-box !important;
     }
 
     .barra-contacto-fija {
