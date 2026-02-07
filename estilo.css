@@ -314,24 +314,26 @@ img {
         border-radius: 20px;        /* Quitamos su radio propio para que encaje con el del TR */
         border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
     }
-   .tabla-servicios {
-    display: table !important; /* Fuerza el comportamiento de tabla */
-    width: 90% !important;     /* Mantiene el ancho del ordenador */
-    margin: 20px auto !important;
-    border-collapse: separate !important;
-}
+  .tabla-servicios {
+        display: table !important; 
+        width: 90% !important; /* Cambiado de 90% a 100% para aprovechar el espacio */
+        margin: 10px 0 !important;
+        border-collapse: collapse !important; /* Mejor para líneas simples */
+        table-layout: auto !important; /* Permite que el texto se ajuste naturalmente */
+    }
 
-.tabla-servicios tr {
-    display: table-row !important; /* Evita que las filas se separen */
-    margin-bottom: 0 !important;   /* Elimina el espacio entre filas */
-}
+    .tabla-servicios tr {
+        display: table-row !important;
+    }
 
-.tabla-servicios td {
-    display: table-cell !important; /* Vuelve a ser una celda normal */
-    width: auto !important;          /* Deja que el contenido dicte el ancho */
-    border-bottom: 1px solid #BDBDBD !important;
-    padding: 2% !important;
-}
+    .tabla-servicios td {
+        display: table-cell !important;
+        width: 100% !important;
+        padding: 12px 5px !important; /* Más espacio vertical para que sea fácil de leer */
+        border-bottom: 1px solid #BDBDBD !important;
+        font-size: 1.1em; /* Un poco más grande para legibilidad */
+        text-align: center;
+    }
 
     /* Quitamos el borde inferior a la última fila para no romper el redondeado */
     .tabla-servicios tr:last-child td {
@@ -395,7 +397,9 @@ img {
     /* Ajuste para que las tablas no se rompan en móvil */
     
     /* Ajustamos el ancho de las columnas: la imagen ocupa menos que el texto */
-    th:nth-child(1), td:nth-child(1) { width: 80%; }
+  /*  th:nth-child(1), td:nth-child(1) { width: 80%; }
     th:nth-child(2), td:nth-child(2) { width: 50%; }
+    
+    */
   
 }
