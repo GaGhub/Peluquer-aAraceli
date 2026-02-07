@@ -314,28 +314,24 @@ img {
         border-radius: 20px;        /* Quitamos su radio propio para que encaje con el del TR */
         border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
     }
-    .tabla-servicios {
-        display: table; /* Recupera el formato tabla */
-        border-collapse: separate !important; /* Necesario para el border-radius */
-        border: 2px solid #BDBDBD !important; /* Borde exterior unificado */
-        border-radius: 20px !important; /* Redondeado de las 4 esquinas */
-        overflow: hidden;
-        width: 100% !important;
-        margin: 0 !important;
-    }
+   .tabla-servicios {
+    display: table !important; /* Fuerza el comportamiento de tabla */
+    width: 90% !important;     /* Mantiene el ancho del ordenador */
+    margin: 20px auto !important;
+    border-collapse: separate !important;
+}
 
-    .tabla-servicios tr {
-        display: block !important; 
-         margin-bottom: 10px; 
-    }
+.tabla-servicios tr {
+    display: table-row !important; /* Evita que las filas se separen */
+    margin-bottom: 0 !important;   /* Elimina el espacio entre filas */
+}
 
-    .tabla-servicios td {
-        display: block !important; 
-        width: 100% !important;
-        text-align: center;
-        padding: 12px !important;
-        border-bottom: 1px solid #BDBDBD !important; /* Línea divisoria entre servicios */
-    }
+.tabla-servicios td {
+    display: table-cell !important; /* Vuelve a ser una celda normal */
+    width: auto !important;          /* Deja que el contenido dicte el ancho */
+    border-bottom: 1px solid #BDBDBD !important;
+    padding: 2% !important;
+}
 
     /* Quitamos el borde inferior a la última fila para no romper el redondeado */
     .tabla-servicios tr:last-child td {
