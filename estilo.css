@@ -315,7 +315,7 @@ img {
         border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
     }
     .tabla-servicios {
-        display: table !important; /* Recupera el formato tabla */
+        display: table; /* Recupera el formato tabla */
         border-collapse: separate !important; /* Necesario para el border-radius */
         border: 2px solid #BDBDBD !important; /* Borde exterior unificado */
         border-radius: 20px !important; /* Redondeado de las 4 esquinas */
@@ -325,9 +325,8 @@ img {
     }
 
     .tabla-servicios tr {
-        display: flex !important; 
-        flex-direction: row !important;
-         margin-bottom: 20px; 
+        display: block !important; 
+         margin-bottom: 10px; 
     }
 
     .tabla-servicios td {
