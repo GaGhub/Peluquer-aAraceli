@@ -316,7 +316,7 @@ img {
     }
   .tabla-servicios {
         display: table !important; 
-        width: 90% !important;
+        width: 100% !important;
         margin: 0 auto !important;
         border-collapse: collapse !important; /* Mejor para líneas simples */
         table-layout: auto !important; /* Permite que el texto se ajuste naturalmente */
