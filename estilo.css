@@ -321,7 +321,7 @@ img {
         border-radius: 20px !important; /* Redondeado de las 4 esquinas */
         overflow: hidden;
         width: 100% !important;
-        margin: 20px 0 !important;
+        margin: 0 auto !important;
     }
 
     .tabla-servicios tr {
