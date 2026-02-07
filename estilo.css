@@ -245,7 +245,7 @@ img {
     -webkit-user-drag: none;
 }
 /* --- AJUSTES ESPECÍFICOS PARA MÓVIL */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     body {
         /* Aumentamos el margen inferior para que la barra no tape el contenido */
         padding-bottom: 120px !important; 
@@ -315,7 +315,8 @@ img {
         border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
     }
   .tabla-servicios {
-         width: 90%;
+        display: table-row;
+        width: 90%;
         margin: 20px auto;
          border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
          border-collapse: separate; 
