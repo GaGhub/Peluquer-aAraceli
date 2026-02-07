@@ -245,37 +245,39 @@ img {
     -webkit-user-drag: none;
 }
 /* --- AJUSTES ESPECÍFICOS PARA MÓVIL */
+/* --- AJUSTES ESPECÍFICOS PARA MÓVIL (CORREGIDO) --- */
 @media (max-width: 1000px) {
     body {
         /* Aumentamos el margen inferior para que la barra no tape el contenido */
         padding-bottom: 120px !important; 
-        font-size: large; /* Reducimos el tamaño general en móvil para que no sea gigante */
+        font-size: large; 
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     }
 
-    /* Mantiene el menú en una sola fila deslizable */
+    /* MENÚ DE NAVEGACIÓN */
     header nav {
         width: 100%;
         overflow-x: auto; 
     }
 
     nav ul {
-        flex-wrap: wrap;       /* CAMBIO CLAVE: de nowrap a wrap */
-        justify-content: center; /* Centra los botones en las dos líneas */
-        gap: 10px;             /* Espacio controlado entre botones */
-        overflow-x: visible;   /* Ya no necesitamos el scroll horizontal */
+        flex-wrap: wrap;       
+        justify-content: center; 
+        gap: 10px;             
+        overflow-x: visible;   
     }
 
     nav ul li a {
-        padding: 5px 8px; /* Botones más compactos */
-        font-size: 0.8em;  /* Fuente más pequeña para que quepan más opciones */
+        padding: 5px 8px; 
+        font-size: 0.8em;  
     }
 
-    /* --- Corrección de la Tabla de Productos --- */
-  table {
-        display: block;        /* Convierte la tabla en un contenedor simple */
+    /* --- ESTILOS PARA LA TABLA DE PRODUCTOS (MODO TARJETA) --- */
+    /* Esto afecta solo a la tabla de productos (la que tiene imágenes) */
+    table {
+        display: block;        
         width: 100% !important;
-        border: none;          /* Quitamos el borde a la tabla general */
+        border: none;          
         border-collapse: separate;
     }
 
@@ -284,114 +286,119 @@ img {
         width: 100%;
     }
 
-    /* Cada fila (producto) se convierte en una caja con borde */
+    /* Cada fila de producto es una tarjeta */
     tr {
-        display: flex;         /* Usamos flex para controlar el orden si fuera necesario */
-        flex-direction: column; /* Apila contenido: imagen arriba, texto abajo */
-        margin-bottom: 30px;    /* Espacio entre productos */
-        border: 2px solid #BDBDBD; /* EL BORDE EXTERIOR QUE BUSCABAS */
-        border-radius: 20px;    /* Esquinas redondeadas para cada producto */
-        overflow: hidden;       /* Para que la imagen no se salga de las esquinas redondeadas */
+        display: flex;         
+        flex-direction: column; 
+        margin-bottom: 30px;    
+        border: 2px solid #BDBDBD; 
+        border-radius: 20px;    
+        overflow: hidden;       
         background-color: #fff;
-        padding: 0;             /* Quitamos padding para que la imagen llegue al borde si quieres */
+        padding: 0;             
     }
 
     td {
         display: block;
         width: 100% !important;
-        border: none !important; /* Quitamos bordes internos para que no se corten */
-        padding: 15px !important; /* Espacio para el texto */
+        border: none !important; 
+        padding: 15px !important; 
         box-sizing: border-box;
     }
 
-    /* Ajuste de la imagen para que ocupe el ancho superior */
+    /* Imágenes de productos */
     table img {
-        width: 100% !important;  /* Ocupa todo el ancho de la caja */
+        width: 100% !important;  
         max-width: none !important;
         height: auto !important;
         margin: 0 !important;
         display: block;
-        border-radius: 20px;        /* Quitamos su radio propio para que encaje con el del TR */
-        border-bottom: 1px solid #BDBDBD; /* Línea divisoria opcional entre foto y texto */
-    }
-  .tabla-servicios {
-        display: table;
-        width: 90%;
-        margin: 20px auto;
-         border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
-         border-collapse: separate; 
-         border-spacing: 0; 
-        border-radius: 10px;
-        table-layout: fixed;
-        overflow: hidden; /* Esto asegura que el fondo de las celdas no se salga de las esquinas */
+        border-radius: 20px;        
+        border-bottom: 1px solid #BDBDBD; 
     }
 
-    .tabla-servicios tr { 
-  display: table-row
-  text-align: center;
-  vertical-align: middle;
-  /* Reducimos el borde para que no se vea tosco con el nuevo espaciado */
-  border: 0px ;
-  border-bottom: 1px solid #BDBDBD; 
-  border-right: 1px solid #BDBDBD;
-  padding: 2%;
-}
+    /* --- CORRECCIÓN DEFINITIVA TABLA SERVICIOS --- */
+    /* Sobrescribimos el display: block anterior para que esta sí sea tabla */
+   /* --- TABLA SERVICIOS CORREGIDA (CON PUNTOS Y COMAS) --- */
+    .tabla-servicios {
+        display: block !important; /* Aceptamos el bloque para evitar conflictos */
+        width: 90% !important;
+        margin: 20px auto !important;
+        border: 2px solid #BDBDBD !important; /* El cuadro exterior que quieres */
+        border-radius: 15px !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        background: white !important;
+    }
 
-.tabla-servicios td {
-        display: table-cell !important; /* Obliga a comportarse como parte de la tabla, no como bloque */
+    .tabla-servicios tr {
+        display: block !important;
         width: 100% !important;
-        
-        border-right: none !important; /* Elimina bordes laterales para evitar el efecto "celda suelta" */
-        padding: 15px 10px !important;
-        text-align: center;
+        margin: 0 !important; /* Quitamos márgenes para que no parezcan cajas sueltas */
+        padding: 0 !important;
+        border: none !important;
     }
 
-    /* Quitamos el borde inferior a la última fila para no romper el redondeado */
+    .tabla-servicios td {
+        display: block !important; /* Se comporta como una fila de texto */
+        width: 100% !important;
+        text-align: center !important; /* CENTRADO HORIZONTAL */
+        padding: 20px 0 !important; /* Espacio arriba y abajo */
+        
+        /* Línea divisoria solo abajo, sin laterales */
+        border: none !important;
+        border-bottom: 1px solid #BDBDBD !important;
+        
+        /* Eliminamos cualquier margen o radio heredado */
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Quitamos la línea al último servicio */
     .tabla-servicios tr:last-child td {
         border-bottom: none !important;
     }
 
-    /* Ajuste de texto para que no quede pegado a los bordes */
+    /* --- ELIMINAR INTERFERENCIAS --- */
+    /* Esto anula la regla que mencionaste que no encontrabas */
     td:last-child {
-        padding: 0 5% !important; 
-        line-height: 1.5;
+        padding: 20px 0 !important;
+        border-right: none !important;
+    }
     }
 
+    /* --- BARRA DE CONTACTO INFERIOR --- */
     .barra-contacto-fija {
         padding: 12px 0;
         font-family: Arial, Helvetica, sans-serif !important;
     }
 
     .barra-contacto-fija img {
-        width: 28px !important;  /* Forzamos el mismo ancho */
-        height: 28px !important; /* Forzamos el mismo alto */
+        width: 28px !important;  
+        height: 28px !important; 
     }
     
     .contenedor-flexible {
-        flex-direction: column; /* Ponemos los elementos uno sobre otro */
+        flex-direction: column; 
         gap: 8px; 
-    }
-
-    .barra-contacto-fija {
-        padding: 12px 0;
-        font-family: Arial, Helvetica, sans-serif !important; 
     }
 
     .texto-cita {
         display: block;
         width: 100%;
         font-size: 0.85em; 
-        color:red; 
+        color: red; 
         margin-bottom: 5px;
-        text-transform: uppercase; /* Hace que "PIDE TU CITA" destaque sin ser gigante */
+        text-transform: uppercase; 
     }
 
     .enlace-contacto {
         font-family: Arial, sans-serif !important;
-        font-size: 1.2em; /* Tamaño aumentado para que el número sea fácil de leer */
+        font-size: 1.2em; 
         font-weight: bold;
-        color: #000; /* Negro puro para el mejor contraste posible */
-        background: #f0f0f0; /* Fondo gris muy suave para que parezca un botón táctil */
+        color: #000; 
+        background: #f0f0f0; 
         padding: 10px 20px;
         border-radius: 10px;
         width: 90%; 
@@ -399,9 +406,7 @@ img {
         justify-content: center;
     }
 
-    /* Ajuste específico para el número de WhatsApp */
     .enlace-contacto span {
-        color: #25D366 !important; /* El verde oficial de WhatsApp es muy legible */
+        color: #25D366 !important; 
     }
-  
 }
