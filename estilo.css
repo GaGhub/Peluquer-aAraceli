@@ -352,6 +352,11 @@ img {
         padding: 12px 0;
         font-family: Arial, Helvetica, sans-serif !important;
     }
+
+    .barra-contacto-fija img {
+        width: 28px !important;  /* Forzamos el mismo ancho */
+        height: 28px !important; /* Forzamos el mismo alto */
+    }
     
     .contenedor-flexible {
         flex-direction: column; /* Ponemos los elementos uno sobre otro */
