@@ -146,7 +146,7 @@ display: block;                 /* 🔹 Evita espacio raro debajo de la imagen *
 footer {
    background-color: white; 
    color: #212121; 
-   margin:5%;
+   margin-bottom:20%;
   }
   footer img {
     width: 20px;
@@ -175,9 +175,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .barra-contacto-fija img {
@@ -190,7 +190,7 @@ footer {
 
 .texto-cita {
     color: #cf5468;
-    font-size: 1.1em;
+    font-size: 0.5em;
     font-weight: bold;
 }
 
@@ -199,7 +199,7 @@ footer {
     color: inherit;
     display: flex;
     align-items: center;
-    font-size: 1.1em; /* Tamaño legible */
+    font-size: 0.7em; /* Tamaño legible */
     white-space: nowrap; /* Evita que el número de teléfono se parta en dos líneas */
 }
 
