@@ -42,7 +42,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none !important; /* Quita el subrayado */
-    color: black;          /* Fuerza el color negro */
+    color: white;          /* Fuerza el color negro */
     font-weight: bold;
     display: block;
     border-radius: 5px;         /* esquinas redondeadas */
