@@ -286,12 +286,11 @@ Sensual y discreto, es perfecto para llevarlo siempre contigo y usarlo en tu cab
        <section>
     <p><a id="section5"> </a></p>
     <h2><strong>OPINIONES</strong></h2>
+           <script src="https://elfsightcdn.com/platform.js" async></script>
 
-  <script defer async src='https://cdn.trustindex.io/loader.js?39d939d63657723cc696bdbcc6b'></script>
+           <div class="elfsight-app-b4951b9a-848d-48a2-bb6b-cf9fd3f4d2f5" data-elfsight-app-lazy>
+           </div>
 
-    <div class="ti-widget" data-layout-id="TU_ID" data-widget-id="TU_ID"></div>
-
-    <div style="text-align: center; margin-top: 60px; margin-bottom: 40px;">
         
         <p style="margin-bottom: 25px; font-size: 1.1em;">
             <strong>¿Eres cliente?</strong> 
@@ -303,46 +302,9 @@ Sensual y discreto, es perfecto para llevarlo siempre contigo y usarlo en tu cab
             ESCRIBIR MI OPINIÓN EN GOOGLE
         </a>
 
-    </div>
+
 </section>
 
-        <!-- ========================================== -->
-        <!-- INSERCIÓN DE COOKIES Y TEXTOS LEGALES      -->
-        <!-- ========================================== -->
-        <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; margin-top: 40px; border-top: 1px solid #dee2e6;">
-            <!-- Opción A de Protecmir: Enlaces en pestañas independientes -->
-            <div class="legal-links" style="margin-bottom: 10px;">
-                <a href="textos-legales.html" style="margin: 0 10px; color: #333; text-decoration: none;"></a> |
-
-            </div>
-            <p style="font-size: 12px; color: #666;">© 2026 Peluquería Araceli. Todos los derechos reservados.</p>
-        </footer>
-
-        <!-- Banner de aviso de cookies flotante -->
-        <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #212529; color: #fff; padding: 15px; display: flex; justify-content: space-between; align-items: center; z-index: 9999; box-shadow: 0 -2px 10px rgba(0,0,0,0.2);">
-            <div style="max-width: 70%; font-size: 14px; margin-left: 20px;">
-                Utilizamos cookies propias y de terceros para finalidades analíticas y publicitarias. Puede aceptar o rechazar las cookies configuradas a continuación o consultar nuestra <a href="cookies.html" style="color: #ff6b6b; text-decoration: underline;">Política de Cookies</a>.
-            </div>
-            <div style="margin-right: 20px;">
-                <button onclick="rechazarCookies()" style="background: #6c757d; color: white; border: none; padding: 8px 15px; margin-right: 5px; cursor: pointer; border-radius: 4px;">Rechazar</button>
-                <button onclick="aceptarCookies()" style="background: #dc3545; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px;">Aceptar</button>
-            </div>
-        </div>
-
-        <script>
-            function aceptarCookies() {
-                document.getElementById('cookie-banner').style.display = 'none';
-                localStorage.setItem('cookieConsent', 'accepted');
-            }
-            function rechazarCookies() {
-                document.getElementById('cookie-banner').style.display = 'none';
-                localStorage.setItem('cookieConsent', 'rejected');
-            }
-            if(localStorage.getItem('cookieConsent')) {
-                document.getElementById('cookie-banner').style.display = 'none';
-            }
-        </script>
-        <!-- ========================================== -->
         
  <div class="barra-contacto-fija">
     <div class="contenedor-flexible">
@@ -390,6 +352,143 @@ Sensual y discreto, es perfecto para llevarlo siempre contigo y usarlo en tu cab
         }
     }
 </script>
+        <!-- ========================================== -->
+        <!-- BANNER DE COOKIES - DOBLE CAPA (PROTECMIR) -->
+        <!-- ========================================== -->
+
+        <!-- 1ª CAPA: Banner inferior flotante -->
+        <div id="cookie-banner-layer1" style="position: fixed; bottom: 65px; left: 0; width: 100%; background: #212529; color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 100000; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); font-family: sans-serif; box-sizing: border-box;">
+            <div style="max-width: 65%; font-size: 13px; line-height: 1.4;">
+                En nuestra web utilizamos cookies propias y de terceros para analizar nuestros servicios y mostrarte publicidad relacionada con tus preferencias en base a un perfil elaborado a partir de tus hábitos de navegación. Puedes obtener más información y configurar tus preferencias <a href="javascript:void(0);" onclick="abrirConfiguracionCookies()" style="color: #ff6b6b; text-decoration: underline; cursor: pointer;">AQUÍ</a> o consultar nuestra <a href="textos-legales.html" style="color: #ff6b6b; text-decoration: underline;">Política de Cookies</a>.
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button onclick="rechazarTodasCookies()" style="background: #6c757d; color: white; border: none; padding: 8px 14px; cursor: pointer; border-radius: 4px; font-size: 13px; font-weight: bold;">Rechazar</button>
+                <button onclick="aceptarTodasCookies()" style="background: #dc3545; color: white; border: none; padding: 8px 14px; cursor: pointer; border-radius: 4px; font-size: 13px; font-weight: bold;">Aceptar</button>
+            </div>
+        </div>
+
+        <!-- 2ª CAPA: Panel Modal de Configuración Avanzada por Finalidades -->
+        <div id="cookie-modal-layer2" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100001; justify-content: center; align-items: center; font-family: sans-serif;">
+            <div style="background: #ffffff; color: #333; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; border-radius: 8px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); position: relative;">
+                <button onclick="cerrarConfiguracionCookies()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 22px; cursor: pointer; color: #666;">&times;</button>
+
+                <h3 style="margin-top: 0; color: #212529; font-size: 18px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Configuración Avanzada de Cookies</h3>
+                <p style="font-size: 13px; color: #666; line-height: 1.4;">
+                    Desde este panel puede configurar las cookies que desea aceptar o rechazar. Las cookies estrictamente necesarias no se pueden desactivar ya que son esenciales para el funcionamiento básico de la página.
+                </p>
+
+                <div style="margin: 20px 0; display: flex; flex-direction: column; gap: 12px;">
+                    <!-- Técnicas -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 6px;">
+                        <div>
+                            <strong style="font-size: 14px; display: block;">Cookies técnicas (Necesarias)</strong>
+                            <span style="font-size: 12px; color: #666;">Esenciales para transmitir datos y el funcionamiento de la web.</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked disabled style="width: 18px; height: 18px; cursor: not-allowed;">
+                        </div>
+                    </div>
+
+                    <!-- Análisis -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 6px;">
+                        <div>
+                            <strong style="font-size: 14px; display: block;">Cookies de análisis estadísticos</strong>
+                            <span style="font-size: 12px; color: #666;">Permiten medir el tráfico y analizar hábitos de navegación.</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cookie-analitica" style="width: 18px; height: 18px; cursor: pointer;">
+                        </div>
+                    </div>
+
+                    <!-- Personalización -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 6px;">
+                        <div>
+                            <strong style="font-size: 14px; display: block;">Cookies de personalización</strong>
+                            <span style="font-size: 12px; color: #666;">Permiten recordar preferencias del usuario (ej. idioma o diseño).</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cookie-personalizacion" style="width: 18px; height: 18px; cursor: pointer;">
+                        </div>
+                    </div>
+
+                    <!-- Publicitarias -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 6px;">
+                        <div>
+                            <strong style="font-size: 14px; display: block;">Cookies publicitarias</strong>
+                            <span style="font-size: 12px; color: #666;">Utilizadas para mostrar publicidad personalizada y segmentada.</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cookie-publicitaria" style="width: 18px; height: 18px; cursor: pointer;">
+                        </div>
+                    </div>
+
+                    <!-- Terceros -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 6px;">
+                        <div>
+                            <strong style="font-size: 14px; display: block;">Cookies de terceros (Google, Trustindex, etc.)</strong>
+                            <span style="font-size: 12px; color: #666;">Gestionadas por proveedores externos para analítica y widgets.</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cookie-terceros" style="width: 18px; height: 18px; cursor: pointer;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; border-top: 1px solid #eee; padding-top: 15px;">
+                    <button onclick="rechazarTodasCookies()" style="background: #6c757d; color: white; border: none; padding: 9px 12px; cursor: pointer; border-radius: 4px; font-size: 12px; font-weight: bold;">Rechazar todas</button>
+                    <button onclick="guardarConfiguracionCookies()" style="background: #343a40; color: white; border: none; padding: 9px 12px; cursor: pointer; border-radius: 4px; font-size: 12px; font-weight: bold;">Guardar configuración</button>
+                    <button onclick="aceptarTodasCookies()" style="background: #dc3545; color: white; border: none; padding: 9px 12px; cursor: pointer; border-radius: 4px; font-size: 12px; font-weight: bold;">Aceptar todas</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lógica JavaScript -->
+        <script>
+            function abrirConfiguracionCookies() {
+                document.getElementById('cookie-modal-layer2').style.display = 'flex';
+            }
+            function cerrarConfiguracionCookies() {
+                document.getElementById('cookie-modal-layer2').style.display = 'none';
+            }
+            function ocultarBanners() {
+                document.getElementById('cookie-banner-layer1').style.display = 'none';
+                document.getElementById('cookie-modal-layer2').style.display = 'none';
+            }
+            function aceptarTodasCookies() {
+                ocultarBanners();
+                localStorage.setItem('cookieConsent', 'all_accepted');
+                localStorage.setItem('cookie_analitica', 'true');
+                localStorage.setItem('cookie_personalizacion', 'true');
+                localStorage.setItem('cookie_publicitaria', 'true');
+                localStorage.setItem('cookie_terceros', 'true');
+            }
+            function rechazarTodasCookies() {
+                ocultarBanners();
+                localStorage.setItem('cookieConsent', 'rejected');
+                localStorage.setItem('cookie_analitica', 'false');
+                localStorage.setItem('cookie_personalizacion', 'false');
+                localStorage.setItem('cookie_publicitaria', 'false');
+                localStorage.setItem('cookie_terceros', 'false');
+            }
+            function guardarConfiguracionCookies() {
+                const analitica = document.getElementById('cookie-analitica').checked;
+                const personalizacion = document.getElementById('cookie-personalizacion').checked;
+                const publicitaria = document.getElementById('cookie-publicitaria').checked;
+                const terceros = document.getElementById('cookie-terceros').checked;
+
+                ocultarBanners();
+                localStorage.setItem('cookieConsent', 'customized');
+                localStorage.setItem('cookie_analitica', analitica);
+                localStorage.setItem('cookie_personalizacion', personalizacion);
+                localStorage.setItem('cookie_publicitaria', publicitaria);
+                localStorage.setItem('cookie_terceros', terceros);
+            }
+
+            // Si el usuario ya dio su consentimiento previamente, ocultar el aviso inicial
+            if(localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-banner-layer1').style.display = 'none';
+            }
+        </script>
     </body>
 
 </html> 
