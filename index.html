@@ -15,12 +15,12 @@
         <header>
            <img src="favicon.png" alt="logotipo del sitio web"> <!--He tenido que añadir alt por un error en la validación, pues este describe la imagen si no se carga, además de servir para personas con discapacidad visual-->
            <nav>
-                <ul style=""background-color: #afaeae; border-radius: 10px; padding: 1%;">
-                    <li style="background-color: #afaeae; border-radius: 10px; padding: 1%;"> <h1><strong><a href="#section1">SERVICIOS</a></strong></h1></li>  
-                     <li  style="background-color: #afaeae; border-radius: 10px; padding: 1%;"> <h1><strong><a href="#section2">GALERÍA</a></strong></h1></li>
-                    <li style="background-color: #afaeae; border-radius: 10px; padding: 1%;"><h1><strong> <a href="#section3">PRODUCTOS</a></strong></h1></li>
-                    <li  style="background-color: #afaeae; border-radius: 10px; padding: 1%;"> <h1><strong><a href="#section4">UBICACIÓN</a></strong></h1></li>             
-                    <li  style="background-color: #afaeae; border-radius: 10px; padding: 1%;"> <h1><strong><a href="#section5">OPINIONES</a></strong></h1></li>
+                <ul>
+                    <li> <h1><strong><a href="#section1">SERVICIOS</a></strong></h1></li>  
+                     <li> <h1><strong><a href="#section2">GALERÍA</a></strong></h1></li>
+                    <li><h1><strong> <a href="#section3">PRODUCTOS</a></strong></h1></li>
+                    <li> <h1><strong><a href="#section4">UBICACIÓN</a></strong></h1></li>             
+                    <li> <h1><strong><a href="#section5">OPINIONES</a></strong></h1></li>
                     
                 </ul>
             </nav>
@@ -285,32 +285,64 @@ Sensual y discreto, es perfecto para llevarlo siempre contigo y usarlo en tu cab
 
        <section>
     <p><a id="section5"> </a></p>
-    <h2 style="margin-bottom: 3%;"><strong>OPINIONES</strong></h2>
+    <h2><strong>OPINIONES</strong></h2>
 
- <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
+  <script defer async src='https://cdn.trustindex.io/loader.js?39d939d63657723cc696bdbcc6b'></script>
 
-<div class="elfsight-app-b4951b9a-848d-48a2-bb6b-cf9fd3f4d2f5" data-elfsight-app-lazy>
+    <div class="ti-widget" data-layout-id="TU_ID" data-widget-id="TU_ID"></div>
+
+    <div style="text-align: center; margin-top: 60px; margin-bottom: 40px;">
         
-</div>
-       </section>
-
-        <footer>
-         
-<div class="opinion">
-        
-    <p style="margin-bottom: 25px; font-size: 1.1em;">
+        <p style="margin-bottom: 25px; font-size: 1.1em;">
             <strong>¿Eres cliente?</strong> 
         </p>
+        
         <a href="https://search.google.com/local/writereview?placeid=ChIJV97PuQaTlxIR_K0Eq07PGPc" 
-        target="_blank" style="background-color: red; color: white; border-radius: 10px; padding: 0.75%">
-          <strong> ESCRIBIR MI OPINIÓN EN GOOGLE</strong>
+           target="_blank" 
+           style="display: inline-block; padding: 18px 35px; background-color: #cf5468; color: white; text-decoration: none; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
+            ESCRIBIR MI OPINIÓN EN GOOGLE
         </a>
-</div>
-    
 
+    </div>
+</section>
 
+        <!-- ========================================== -->
+        <!-- INSERCIÓN DE COOKIES Y TEXTOS LEGALES      -->
+        <!-- ========================================== -->
+        <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; margin-top: 40px; border-top: 1px solid #dee2e6;">
+            <!-- Opción A de Protecmir: Enlaces en pestañas independientes -->
+            <div class="legal-links" style="margin-bottom: 10px;">
+                <a href="textos-legales.html" style="margin: 0 10px; color: #333; text-decoration: none;"></a> |
+
+            </div>
+            <p style="font-size: 12px; color: #666;">© 2026 Peluquería Araceli. Todos los derechos reservados.</p>
         </footer>
+
+        <!-- Banner de aviso de cookies flotante -->
+        <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #212529; color: #fff; padding: 15px; display: flex; justify-content: space-between; align-items: center; z-index: 9999; box-shadow: 0 -2px 10px rgba(0,0,0,0.2);">
+            <div style="max-width: 70%; font-size: 14px; margin-left: 20px;">
+                Utilizamos cookies propias y de terceros para finalidades analíticas y publicitarias. Puede aceptar o rechazar las cookies configuradas a continuación o consultar nuestra <a href="cookies.html" style="color: #ff6b6b; text-decoration: underline;">Política de Cookies</a>.
+            </div>
+            <div style="margin-right: 20px;">
+                <button onclick="rechazarCookies()" style="background: #6c757d; color: white; border: none; padding: 8px 15px; margin-right: 5px; cursor: pointer; border-radius: 4px;">Rechazar</button>
+                <button onclick="aceptarCookies()" style="background: #dc3545; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px;">Aceptar</button>
+            </div>
+        </div>
+
+        <script>
+            function aceptarCookies() {
+                document.getElementById('cookie-banner').style.display = 'none';
+                localStorage.setItem('cookieConsent', 'accepted');
+            }
+            function rechazarCookies() {
+                document.getElementById('cookie-banner').style.display = 'none';
+                localStorage.setItem('cookieConsent', 'rejected');
+            }
+            if(localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        </script>
+        <!-- ========================================== -->
         
  <div class="barra-contacto-fija">
     <div class="contenedor-flexible">
